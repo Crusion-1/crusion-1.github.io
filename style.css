@@ -9,6 +9,7 @@ html, body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
 html::-webkit-scrollbar {
@@ -56,9 +57,11 @@ header {
     border-radius: 5px;
 }
 
-#profile h2 {
+#profile h3 {
     margin: 0.5rem 0;
     color: white;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
 }
 
 #profile p {
@@ -103,11 +106,11 @@ header {
     border: 0.5px solid black;
     margin: 10px;
     width: 100%;
-    height: 30rem;
+    height: 21rem;
     width: 40rem;
     min-width: 10rem;
     max-width: 50rem;
-    max-height: 30rem;
+    max-height: 21rem;
     color: white;
 }
 .walkingCrusion {
