@@ -1,17 +1,16 @@
-html, body {
+.mainPages {
     margin: 0;
     padding: 0;
-    font-family: cursive;
     background-color: black;
-    background: url(assets/images/background.png);
+    background: url(assets/images/documentarybackground.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
+    font-family: 'Noto Sans Mono', monospace;
 }
+
 html::-webkit-scrollbar {
         display: none;
     }
@@ -24,8 +23,29 @@ header {
     font-family: 'Press Start 2P';
     position: sticky;
     top: 0;
-    text-align: center;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
 }
+header h1 {
+    margin: 0;
+    padding: 10px;
+}
+
+header a {
+    color: rgb(208, 197, 192);
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Tiny5", monospace;
+    margin: auto 10px auto auto;
+}
+
+header a:hover {
+    color: rgb(65, 186, 241);
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
 #bodySections {
     display: flex;
     flex-direction: row;
@@ -42,9 +62,12 @@ header {
     flex-direction: column;
     border: 0.5px solid black;
     padding: 10px;
-    background-color: rgb(56, 51, 51);
+    background-color: rgba(56, 51, 51, 0.8);
     overflow: hidden;
     margin-right: 0.9rem;
+    box-shadow:
+  0 4px 6px rgba(0, 0, 0, 0.3),
+  0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 #profilePic {
@@ -67,7 +90,8 @@ header {
 #profile p {
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
-    color: white;
+    color: rgb(208, 197, 192);
+    font-size: 12px;
 }
 
 .aboutProfile {
@@ -97,8 +121,10 @@ header {
     font-family: 'Press Start 2p', cursive;
     color: white;
     background-color: rgb(56, 51, 51);
-    border: 0.5px solid black;
     padding: 10px;
+    box-shadow:
+  0 4px 6px rgba(0, 0, 0, 0.3),
+  0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 #projects {
@@ -124,3 +150,43 @@ header {
     position: relative;
     left: 28%;
 }  
+
+/* Documentaries Page */
+
+.documentaries {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    background: url(assets/images/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: 'Noto Sans Mono', monospace;
+}
+#docBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    min-width: 20rem;
+    width: 60rem;
+    height: auto;
+    max-width: 60rem;
+    padding: 10px;
+}
+#documentariesIntro {
+    margin: 10px;
+    width: 100%;
+    height: auto;
+    min-width: 10rem;
+    max-width: 100%;
+    max-height: auto;
+    color: rgb(208, 197, 192);
+    padding: 10px;
+    box-shadow:
+  0 4px 6px rgba(0, 0, 0, 0.3),
+  0 10px 20px rgba(0, 0, 0, 0.4);
+    background-color: rgba(56, 51, 51, 0.8);
+}   
