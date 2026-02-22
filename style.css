@@ -1,3 +1,4 @@
+/* Home Page */
 .mainPages {
     margin: 0;
     padding: 0;
@@ -27,7 +28,8 @@ header {
     display: flex;
     flex-direction: row;
 }
-header h1 {
+header h2 {
+    font-size: clamp(0.8rem, 5vw, 1.3rem);
     margin: 0;
     padding: 10px;
 }
@@ -45,10 +47,41 @@ header a:hover {
     transform: scale(1.1);
     transition-duration: 0.3s;
 }
+.menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(56, 51, 51);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+  header a {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+}
 
 #bodySections {
     display: flex;
     flex-direction: row;
+}
+@media (max-width: 768px) {
+    #bodySections {
+        flex-direction: column;
+    }
 }
 
 #profile {
@@ -58,7 +91,7 @@ header a:hover {
     min-width: 10rem;
     width: 20rem;
     height: auto;
-    max-width: 30rem;
+    max-width: 20rem;
     flex-direction: column;
     border: 0.5px solid black;
     padding: 10px;
@@ -91,7 +124,7 @@ header a:hover {
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
     color: rgb(208, 197, 192);
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .aboutProfile {
@@ -103,26 +136,27 @@ header a:hover {
     text-decoration: none;
 }
 
-#projectsID {
+#contents {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px;
     min-width: 20rem;
-    width: 60rem;
+    width: 90%;
     height: auto;
     max-width: 60rem;
     padding: 10px;
     margin-left: 0.9rem;
 }
 
-#projectsID h1 {
+#contents h1 {
     text-align: center;
-    font-family: 'Press Start 2p', cursive;
+    font-family: "tiny5", monospace;
     color: white;
-    background-color: rgb(56, 51, 51);
+    font-size: 60px;
     padding: 10px;
-    box-shadow:
+    margin: 20px 0px 10px 0px;
+    text-shadow:
   0 4px 6px rgba(0, 0, 0, 0.3),
   0 10px 20px rgba(0, 0, 0, 0.4);
 }
@@ -132,12 +166,52 @@ header a:hover {
     border: 0.5px solid black;
     margin: 10px;
     width: 100%;
-    height: 21rem;
-    width: 40rem;
+    height: 90%;
+    width: 90%;
     min-width: 10rem;
-    max-width: 50rem;
-    max-height: 21rem;
+    max-width: 45rem;
+    max-height: 15rem;
     color: white;
+}
+
+#documentaries {
+    background-color: rgb(56, 51, 51);
+    border: 0.5px solid black;
+    margin: 10px;
+    width: 90%;
+    height: 90%;
+    min-width: 10rem;
+    max-width: 45rem;
+    max-height: 15rem;
+    color: white;
+    overflow: hidden;
+}
+.contentPreview {
+    margin: 10px;
+    width: 90%;
+    height: 5rem;
+    min-width: 10rem;
+    max-width: 45rem;
+    max-height: 5rem;
+    color: rgb(208, 197, 192);
+    overflow: hidden;
+    box-shadow:
+  0 4px 6px rgba(255, 255, 255, 0.15),
+  0 10px 20px rgba(200, 200, 200, 0.12);
+  cursor: pointer;
+}
+.contentPreview h4 {
+    margin: 5px;
+    font-family: "noto sans mono", monospace;
+}
+.contentPreview p {
+    margin: 10px;
+    font-size: 14px;
+}
+.contentPreview:hover {
+    scale: 1.02;
+    transition-duration: 0.3s;
+    color: rgb(164, 211, 233);
 }
 .walkingCrusion {
     height: auto;
@@ -145,10 +219,12 @@ header a:hover {
     align-content: center;
 }
 .walkingCrusion video{
-    max-width: 70%;
-    max-height: 70%;
-    position: relative;
-    left: 28%;
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    left: 17%;
+    top: 70px;
+    z-index: -5;
 }  
 
 /* Documentaries Page */
@@ -190,3 +266,136 @@ header a:hover {
   0 10px 20px rgba(0, 0, 0, 0.4);
     background-color: rgba(56, 51, 51, 0.8);
 }   
+.documentaryEntry {
+    box-shadow:
+  0 4px 6px rgba(0, 0, 0, 0.3),
+  0 10px 20px rgba(0, 0, 0, 0.4);
+    background-color: rgba(56, 51, 51, 0.8);
+    margin: 10px;
+    width: 100%;
+    height: auto;
+    width: 100%;
+    min-width: 10rem;
+    max-width: 100%;
+    max-height: auto;
+    color: white;
+    cursor: pointer;
+}
+.documentaryEntry p, .documentaryEntry h2, .documentaryEntry {
+    transition-duration: 0.3s;
+}
+.documentaryEntry:hover p, .documentaryEntry:hover h2, .documentaryEntry:hover {
+    color: rgb(164, 211, 233);
+    transform: scale(1.02);
+    transition-duration: 0.3s;
+}
+.documentaryEntry h2 {
+    padding: 20px 20px 0px 20px;
+    color: rgb(208, 197, 192);
+    font-family: "Press Start 2P", cursive;
+}
+.documentaryEntry p {
+    margin-top: 10px;
+    padding: 5px 20px 10px 20px;
+    color: rgb(208, 197, 192);
+}
+
+#backToDocumentaries {
+    left: -39%;
+    position: relative;
+    color: rgb(208, 197, 192);
+    text-decoration: none;
+    font-size: 32px;
+    font-family: "Tiny5", monospace;
+    margin: 10px;
+    box-shadow:
+  0 4px 6px rgba(0, 0, 0, 0.3),
+  0 10px 20px rgba(0, 0, 0, 0.4);
+    background-color: rgba(56, 51, 51, 0.8);
+    padding: 10px 10px 10px 20px;
+}
+.document h2 {
+    font-family: "tiny5", monospace;
+    margin-bottom: 2px;
+}
+#docDate {
+    font-family: "tiny5", monospace;
+    margin-top: 0px;
+}
+#backToDocumentaries:hover {
+    color: rgb(65, 186, 241);
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+}
+
+/* Projects Page */
+.projects {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    background: url(assets/images/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: 'Noto Sans Mono', monospace;
+}
+#projectsBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    min-width: 20rem;
+    width: 60rem;
+    height: auto;
+    max-width: 60rem;
+    padding: 10px;
+}
+#projectsIntro {
+    margin: 10px;
+    width: 100%;
+    height: auto;
+    min-width: 10rem;
+    max-width: 100%;
+    max-height: auto;
+    color: rgb(208, 197, 192);
+    padding: 10px;
+    box-shadow:
+  0 4px 6px rgba(0, 0, 0, 0.3),
+  0 10px 20px rgba(0, 0, 0, 0.4);
+    background-color: rgba(56, 51, 51, 0.8);
+}   
+.projectEntry {
+    box-shadow:
+  0 4px 6px rgba(0, 0, 0, 0.3),
+  0 10px 20px rgba(0, 0, 0, 0.4);
+    background-color: rgba(56, 51, 51, 0.8);
+    margin: 10px;
+    width: 100%;
+    height: auto;
+    width: 100%;
+    min-width: 10rem;
+    max-width: 100%;
+    max-height: auto;
+    color: white;
+    cursor: pointer;
+}
+.projectEntry p, .projectEntry h2, .projectEntry {
+    transition-duration: 0.3s;
+}
+.projectEntry:hover p, .projectEntry:hover h2, .projectEntry:hover {
+    color: rgb(164, 211, 233);
+    transform: scale(1.02);
+    transition-duration: 0.3s;
+}
+.projectEntry h2 {
+    padding: 20px 20px 0px 20px;
+    color: rgb(208, 197, 192);
+    font-family: "Press Start 2P", cursive;
+}
+.projectEntry p {
+    margin-top: 10px;
+    padding: 5px 20px 10px 20px;
+    color: rgb(208, 197, 192);
+}
