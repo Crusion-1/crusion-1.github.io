@@ -184,7 +184,10 @@ header a:hover {
     max-width: 45rem;
     max-height: 15rem;
     color: white;
-    overflow: hidden;
+    overflow-y: auto;
+}
+#documentaries::-webkit-scrollbar {
+        display: none;
 }
 .contentPreview {
     margin: 10px;
@@ -399,3 +402,4 @@ header a:hover {
     padding: 5px 20px 10px 20px;
     color: rgb(208, 197, 192);
 }
+
