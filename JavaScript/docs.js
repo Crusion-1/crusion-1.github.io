@@ -25,8 +25,9 @@ documentary1.addEventListener("click", function() {
 
 const documentary2 = document.getElementById("documentary2");
 
-documentary1.addEventListener("click", function() {
+documentary2.addEventListener("click", function() {
     window.location.href = "document2.html";
 });
+
 
 
